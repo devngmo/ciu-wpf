@@ -31,22 +31,22 @@ namespace CIU_WPF.AppLayer
 
             FluentArgsBuilder.New()
                 .DefaultConfigsWithAppDescription("An app to convert png files to jpg files.")
-                .Parameter("-f", "--file")
-                    .WithDescription("Input file path")
-                    .WithExamples("c:\\input.png")
-                    .IsOptionalWithDefault("")
+                .Parameter("-m", "--mode")
+                    .WithDescription("Launch mode: browser, viewer, editor")
+                    .IsOptionalWithDefault("viewer")
                 .Parameter("-d", "--directory")
                     .WithDescription("directory path")
                     .WithExamples("c:\\photos")
                     .IsOptionalWithDefault("")
-                .Parameter("-m", "--mode")
-                    .WithDescription("Launch mode: browser, viewer, editor")
-                    .IsOptionalWithDefault("viewer")
+                .Parameter("-f", "--file")
+                    .WithDescription("Input file path")
+                    .WithExamples("c:\\input.png")
+                    .IsOptionalWithDefault("")
                 //.Parameter<ushort>("-q", "--quality")
                 //    .WithDescription("Quality of the conversion")
                 //    .WithValidation(n => n >= 0 && n <= 100)
                 //    .IsOptionalWithDefault(50)
-                .Call(mode => file => dir =>
+                .Call(mode => dir => file =>
                 {
 
                     if (mode == "editor")
@@ -67,7 +67,7 @@ namespace CIU_WPF.AppLayer
                     /* ... */
                     return Task.CompletedTask;
                 })
-                .ParseAsync(args);
+                .Parse(args);
         }
 
         internal void OnEditorClosed()
