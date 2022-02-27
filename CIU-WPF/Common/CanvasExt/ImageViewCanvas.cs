@@ -95,6 +95,7 @@ namespace CIU_WPF.Common.CanvasExt
                     }
                 }
                 SetValue(SourceProperty, value);
+                InvalidateVisual();
             }
         }
 
