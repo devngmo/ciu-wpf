@@ -2,7 +2,7 @@
   "profiles": {
     "CIU-WPF": {
       "commandName": "Project",
-      "commandLineArgs": "H:\\assets\\icons\\text-mining-icon.png"
+      "commandLineArgs": "-d C:\\Assets\\icons -m browser"
     }
   }
 }
