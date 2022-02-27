@@ -7,7 +7,8 @@
         xmlns:CanvasExt="clr-namespace:CIU_WPF.Common.CanvasExt"
         mc:Ignorable="d"
         DataContextChanged="Window_DataContextChanged"
-        Title="ResizeSettingWindow" Height="450" Width="800" ShowInTaskbar="True" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
+        Title="ResizeSettingWindow" Height="450" Width="800" ShowInTaskbar="True" 
+        WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
     <Grid>
         <DockPanel LastChildFill="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Disabled">
             <DockPanel DockPanel.Dock="Top" LastChildFill="True" Background="Black">
