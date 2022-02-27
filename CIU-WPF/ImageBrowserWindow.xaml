@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CIU_WPF"
         mc:Ignorable="d"
-        Title="Image Browser" Height="450" Width="800">
+        xmlns:CanvasExt="clr-namespace:CIU_WPF.Common.CanvasExt"
+        Title="Image Browser" Height="450" Width="800" ShowInTaskbar="True" 
+        WindowStartupLocation="CenterScreen" WindowState="Normal"
+        PreviewKeyDown="windowPreviewKeyDown"
+        >
     <Grid>
+        <CanvasExt:ImageViewCanvas AllowToMoveViewport="False" 
+                                   x:Name="imageView"></CanvasExt:ImageViewCanvas>
+
+        <ToolBar x:Name="toolbar" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <Button Content="Resize All" Click="showDialogResizeAll"></Button>
+        </ToolBar>
+        
+        <ScrollViewer x:Name="thumbnailScrollViewer" Background="#7F000000" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Height="100" VerticalAlignment="Bottom">
+            <StackPanel x:Name="thumbnailsContainer" Orientation="Horizontal">
+            </StackPanel>
+        </ScrollViewer>
+        
 
     </Grid>
 </Window>
